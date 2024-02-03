@@ -111,3 +111,4 @@ while not shiny:
             pyautogui.keyUp('4')
 
     time.sleep(2)
+    
