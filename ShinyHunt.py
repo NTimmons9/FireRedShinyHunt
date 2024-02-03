@@ -102,7 +102,7 @@ while not shiny:
 
     if screen is not None:
 
-        #openSummary()
+        openSummary()
 
         x, y = 631, 361
 
