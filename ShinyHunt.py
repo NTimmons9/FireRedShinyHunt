@@ -2,14 +2,22 @@ import pyautogui
 from PIL import ImageGrab
 import time
 
+
 shiny = False
+
+def read_file():
+    with open("counter.txt", 'r') as file:
+        return int(file.read())
+
+def write_to_file(z):
+    with open("counter.txt", 'w') as file:
+        file.write(str(z))
 
 def countDown():
     for i in range(10):
         print("T minus " + str(10- i) + " seconds")
         time.sleep(1)
         
-
 def capture_screen():
     # Capture the screen
     screenshot = ImageGrab.grab()
@@ -83,6 +91,7 @@ def save_screenshot():
     print(f"Screenshot saved as {screenshot_filename}")
 
 
+z = read_file()
 
 # Capture the screen every 2 seconds
 countDown()
@@ -92,7 +101,7 @@ while not shiny:
 
     if screen is not None:
 
-        openSummary()
+        #openSummary()
 
         x, y = 631, 361
 
@@ -107,6 +116,8 @@ while not shiny:
             save_screenshot()
             shiny = True
         else:
+            write_to_file(z)
+            z += 1
             print("not yet")
 
     time.sleep(2)
