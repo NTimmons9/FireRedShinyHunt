@@ -98,11 +98,15 @@ z = read_file()
 countDown()
 while not shiny:
     #get screen
+    
+
+
+
+    openSummary()
+
     screen = capture_screen()
 
     if screen is not None:
-
-        openSummary()
 
         x, y = 631, 361
 
