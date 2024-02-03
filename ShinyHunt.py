@@ -25,42 +25,42 @@ def capture_screen():
 
 def openSummary():
     pyautogui.keyDown('1')
-    # Simulate pressing 'a' three times
-    pyautogui.keyDown('a')
-    time.sleep(0.1)
-    pyautogui.keyUp('a')
-    time.sleep(3)
 
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(3)
+    time.sleep(2.5)
 
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(3)
+    time.sleep(2.5)
+
+    pyautogui.keyDown('a')
+    time.sleep(0.1)
+    pyautogui.keyUp('a')
+    time.sleep(2.5)
 
     # Simulate pressing 'x' four times
     pyautogui.keyDown('x')
     time.sleep(0.1)
     pyautogui.keyUp('x')
-    time.sleep(3)
+    time.sleep(2.5)
 
     pyautogui.keyDown('x')
     time.sleep(0.1)
     pyautogui.keyUp('x')
-    time.sleep(3)
+    time.sleep(2.5)
 
     pyautogui.keyDown('x')
     time.sleep(0.1)
     pyautogui.keyUp('x')
-    time.sleep(3)
+    time.sleep(2.5)
 
     pyautogui.keyDown('x')
     time.sleep(0.1)
     pyautogui.keyUp('x')
-    time.sleep(3)
+    time.sleep(3.5)
 
     # Simulate pressing 'q'
     pyautogui.keyDown('q')
@@ -82,9 +82,10 @@ def openSummary():
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(1)
-    pyautogui.keyUp('1')
+    time.sleep(3)
 
+    pyautogui.keyUp('1')
+    
 def save_screenshot():
     screenshot_filename = "shiny_capture.png"
     screen.save(screenshot_filename)
