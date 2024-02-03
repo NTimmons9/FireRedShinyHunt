@@ -2,20 +2,24 @@ import pyautogui
 from PIL import ImageGrab
 import time
 
+
 shiny = False
+
+def read_file():
+    with open("counter.txt", 'r') as file:
+        return int(file.read())
+
+def write_to_file(z):
+    with open("counter.txt", 'w') as file:
+        file.write(str(z))
 
 def countDown():
     for i in range(10):
         print("T minus " + str(10- i) + " seconds")
         time.sleep(1)
-
-def save_screenshot():
-    screenshot_filename = "shiny_capture.png"
-    screen.save(screenshot_filename)
-    print(f"Screenshot saved as {screenshot_filename}")
-
+        
 def capture_screen():
-    # Capture the screena
+    # Capture the screen
     screenshot = ImageGrab.grab()
     return screenshot
 
@@ -81,16 +85,24 @@ def openSummary():
     time.sleep(3)
 
     pyautogui.keyUp('1')
+    
+def save_screenshot():
+    screenshot_filename = "shiny_capture.png"
+    screen.save(screenshot_filename)
+    print(f"Screenshot saved as {screenshot_filename}")
 
+
+z = read_file()
 
 # Capture the screen every 2 seconds
 countDown()
 while not shiny:
-    openSummary()
     #get screen
     screen = capture_screen()
 
     if screen is not None:
+
+        #openSummary()
 
         x, y = 631, 361
 
@@ -101,14 +113,12 @@ while not shiny:
         g_bound = 150
 
         if pixel_color[1] > g_bound:
-            print("Shiny Pokémon detected!" + str(pixel_color))
+            print("Shiny Pokémon detected!")
             save_screenshot()
             shiny = True
-
         else:
-            print("not yet" + str(pixel_color))
-            pyautogui.keyDown('4')
-            pyautogui.keyUp('4')
+            write_to_file(z)
+            z += 1
+            print("not yet")
 
     time.sleep(2)
-    
