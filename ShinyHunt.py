@@ -85,7 +85,7 @@ def openSummary():
     time.sleep(3)
 
     pyautogui.keyUp('1')
-    
+
 def save_screenshot():
     screenshot_filename = "shiny_capture.png"
     screen.save(screenshot_filename)
@@ -113,12 +113,14 @@ while not shiny:
         g_bound = 150
 
         if pixel_color[1] > g_bound:
-            print("Shiny Pokémon detected!")
+            print("Shiny Pokémon detected!" + str(pixel_color))
             save_screenshot()
             shiny = True
         else:
+            print("not yet" + str(pixel_color))
+            pyautogui.keyDown('4')
+            pyautogui.keyUp('4')
             write_to_file(z)
             z += 1
-            print("not yet")
 
     time.sleep(2)
