@@ -94,7 +94,7 @@ def save_screenshot():
 
 z = read_file()
 
-# Capture the screen every 2 seconds
+
 countDown()
 while not shiny:
     #get screen
@@ -127,4 +127,4 @@ while not shiny:
             write_to_file(z)
             z += 1
 
-    time.sleep(2)
+    time.sleep(1)
