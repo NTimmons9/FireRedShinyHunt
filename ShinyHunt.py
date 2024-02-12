@@ -114,7 +114,7 @@ while not shiny:
 
         #rgb(240,202,45) g > 200
         #shiny_color = (240,202,45)
-        g_bound = 150
+        g_bound = 148
 
         if pixel_color[1] > g_bound:
             print("Shiny Pokémon detected!" + str(pixel_color))
