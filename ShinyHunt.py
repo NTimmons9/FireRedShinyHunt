@@ -24,6 +24,8 @@ def capture_screen():
     return screenshot
 
 def openSummary():
+
+
     pyautogui.keyDown('1')
 
     pyautogui.keyDown('a')
@@ -86,6 +88,48 @@ def openSummary():
 
     pyautogui.keyUp('1')
 
+def restart():
+    pyautogui.keyDown('a')
+    time.sleep(0.1)
+    pyautogui.keyUp('a')
+    time.sleep(2)
+
+    pyautogui.keyDown('a')
+    time.sleep(0.1)
+    pyautogui.keyUp('a')
+    time.sleep(2)
+
+    pyautogui.keyDown('a')
+    time.sleep(0.1)
+    pyautogui.keyUp('a')
+    time.sleep(2)
+
+    pyautogui.keyDown('a')
+    time.sleep(0.1)
+    pyautogui.keyUp('a')
+    time.sleep(2)
+
+    pyautogui.keyDown('a')
+    time.sleep(0.1)
+    pyautogui.keyUp('a')
+    time.sleep(2)
+
+    pyautogui.keyDown('a')
+    time.sleep(0.1)
+    pyautogui.keyUp('a')
+    time.sleep(2)
+
+    pyautogui.keyDown('a')
+    time.sleep(0.1)
+    pyautogui.keyUp('a')
+    time.sleep(2)
+
+    pyautogui.keyDown('a')
+    time.sleep(0.1)
+    pyautogui.keyUp('a')
+    time.sleep(2)
+    time.sleep(4)
+
 def save_screenshot():
     screenshot_filename = "shiny_capture.png"
     screen.save(screenshot_filename)
@@ -122,9 +166,11 @@ while not shiny:
             shiny = True
         else:
             print("not yet" + str(pixel_color))
-            pyautogui.keyDown('4')
-            pyautogui.keyUp('4')
+            pyautogui.click(x=(0 + 20), y=(pyautogui.size()[1] - 30))
+            time.sleep(.5)
+            pyautogui.click(x=(0 + 20), y=(pyautogui.size()[1] - 30))
             write_to_file(z)
             z += 1
+            restart()
 
     time.sleep(1)
