@@ -4,6 +4,7 @@ import time
 
 
 shiny = False
+normalColor = (255,146,66)
 
 def read_file():
     with open("counter.txt", 'r') as file:
@@ -156,11 +157,11 @@ while not shiny:
 
         pixel_color = screen.getpixel((x, y))
 
-        #rgb(240,202,45) g > 200
+        #normalColor = (255,146,66)
         #shiny_color = (240,202,45)
-        g_bound = 148
+        #g_bound = 148
 
-        if pixel_color[1] > g_bound:
+        if pixel_color != normalColor:
             print("Shiny Pokémon detected!" + str(pixel_color))
             save_screenshot()
             shiny = True
