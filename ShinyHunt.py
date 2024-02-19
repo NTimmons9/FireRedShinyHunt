@@ -32,104 +32,88 @@ def openSummary():
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(2.5)
+    time.sleep(2)
 
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(2.5)
+    time.sleep(2)
 
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(2.5)
+    time.sleep(2)
 
     # Simulate pressing 'x' four times
     pyautogui.keyDown('x')
     time.sleep(0.1)
     pyautogui.keyUp('x')
-    time.sleep(2.5)
+    time.sleep(2)
 
     pyautogui.keyDown('x')
     time.sleep(0.1)
     pyautogui.keyUp('x')
-    time.sleep(2.5)
+    time.sleep(2)
 
     pyautogui.keyDown('x')
     time.sleep(0.1)
     pyautogui.keyUp('x')
-    time.sleep(2.5)
+    time.sleep(2)
 
     pyautogui.keyDown('x')
     time.sleep(0.1)
     pyautogui.keyUp('x')
-    time.sleep(3.5)
+    time.sleep(2)
 
     # Simulate pressing 'q'
     pyautogui.keyDown('q')
     time.sleep(1)
     pyautogui.keyUp('q')
-    time.sleep(1)
+    time.sleep(1.5)
 
     # Simulate pressing 'a' three times
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(1)
+    time.sleep(.5)
 
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(1)
+    time.sleep(.5)
 
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(3)
-
-    pyautogui.keyUp('1')
+    time.sleep(2)
 
 def restart():
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(2)
+    time.sleep(1)
 
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(2)
+    time.sleep(1.5)
 
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(2)
+    time.sleep(1.5)
 
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(2)
+    time.sleep(1.5)
 
     pyautogui.keyDown('a')
     time.sleep(0.1)
     pyautogui.keyUp('a')
-    time.sleep(2)
+    time.sleep(1.5)
 
-    pyautogui.keyDown('a')
-    time.sleep(0.1)
-    pyautogui.keyUp('a')
-    time.sleep(2)
-
-    pyautogui.keyDown('a')
-    time.sleep(0.1)
-    pyautogui.keyUp('a')
-    time.sleep(2)
-
-    pyautogui.keyDown('a')
-    time.sleep(0.1)
-    pyautogui.keyUp('a')
-    time.sleep(2)
-    time.sleep(4)
+    time.sleep(1)
 
 def save_screenshot():
     screenshot_filename = "shiny_capture.png"
@@ -159,9 +143,10 @@ while not shiny:
 
         #normalColor = (255,146,66)
         #shiny_color = (240,202,45)
-        #g_bound = 148
+        #g_bound = 148q
 
         if pixel_color != normalColor:
+            pyautogui.keyUp('1')
             print("Shiny Pokémon detected!" + str(pixel_color))
             save_screenshot()
             shiny = True
